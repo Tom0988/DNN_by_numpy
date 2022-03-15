@@ -16,6 +16,18 @@ distribution = [
 ]
 
 
+def init_parameters_b(layer):
+    dist = distribution[layer]["b"]
+    return np.random.rand(dimension[layer]) * (dist[1] - dist[0]) + dist[0]
+
+
+def init_patameters_w(layer):
+    dist = distribution[layer]['w']
+    return np.random.rand(dimension[layer]) * (dist[1] - dist[0]) + dist[0]
+
+
+
+
 
 
 
