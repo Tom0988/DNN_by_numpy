@@ -23,7 +23,7 @@ def init_parameters_b(layer):
 
 def init_patameters_w(layer):
     dist = distribution[layer]['w']
-    return np.random.rand(dimension[layer]) * (dist[1] - dist[0]) + dist[0]
+    return np.random.rand(dimension[layer-1], dimension[layer]) * (dist[1] - dist[0]) + dist[0]
 
 
 
